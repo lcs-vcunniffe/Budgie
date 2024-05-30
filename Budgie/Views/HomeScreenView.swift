@@ -23,8 +23,8 @@ struct HomeScreenView: View {
                     .multilineTextAlignment(.center)
                     .font(
                         .custom(
-                            "Cochin",
-                            size: 30
+                            "Avenir-Black",
+                            size: 28
                         )
                     )
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {

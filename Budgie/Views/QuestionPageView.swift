@@ -15,15 +15,46 @@ struct QuestionPageView: View {
     //MARK: Computed properties
     var body: some View {
         VStack {
-            Text("Question placeholder")
-            TextField("Enter here", text: $userInput)
-            Button {
-                moveOn()
-            } label: {
+            HStack {
+                Spacer()
+                Image("questionCornerTriangle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 175)
+            }
+            HStack {
+                Text("Question placeholder")
+                    .font(
+                        .custom(
+                            "AmericanTypewriter-SemiBold",
+                            size: 30
+                        )
+                )
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                Spacer()
+            }
+            TextField("Input placeholder", text: $userInput)
+            Button (action: {moveOn()}) {
                 Text("Next question")
+                    .font(
+                        .custom(
+                            "Georgia",
+                            size: 18
+                        )
+                    )
+                    .padding(EdgeInsets(top: 7, leading: 15, bottom: 7, trailing: 15))
+                    .foregroundStyle(Color.white)
+                    .background(Color.black)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+            Button(action: {}) {
+                Text("<- Home")
+                    .foregroundStyle(Color.white)
             }
             Spacer()
         }
+        .ignoresSafeArea()
+        .background(Color("questionBackground"))
     }
     
     //MARK: Functions
