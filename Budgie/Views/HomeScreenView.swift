@@ -27,7 +27,7 @@ struct HomeScreenView: View {
                             size: 28
                         )
                     )
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                     Text("Get started")
                         .font(
                             .custom(
@@ -39,7 +39,7 @@ struct HomeScreenView: View {
                         .foregroundStyle(.white)
                         .background(Color.black)
                         .clipShape(RoundedRectangle(cornerRadius: 13))
-                })
+                }
             }
             .padding()
         }

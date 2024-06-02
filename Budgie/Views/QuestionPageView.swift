@@ -34,21 +34,43 @@ struct QuestionPageView: View {
                 Spacer()
             }
             TextField("Input placeholder", text: $userInput)
-            Button (action: {moveOn()}) {
-                Text("Next question")
+                .padding(EdgeInsets(top: 5, leading: 10, bottom: 30, trailing: 0))
+                .background(Color.white)
+                .border(Color.black, width: 3)
+            HStack {
+                Button (action: {}) {
+                    Text("<- Back")
+                        .font(
+                            .custom(
+                                "Georgia",
+                                size: 18
+                            )
+                        )
+                        .foregroundStyle(Color.white)
+                }
+                Spacer()
+                Button (action: {moveOn()}) {
+                    Text("Next question")
+                        .font(
+                            .custom(
+                                "Georgia",
+                                size: 18
+                            )
+                        )
+                        .padding(EdgeInsets(top: 7, leading: 15, bottom: 7, trailing: 15))
+                        .foregroundStyle(Color.white)
+                        .background(Color.black)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+            }
+            Button(action: {}) {
+                Text("<- Home")
                     .font(
                         .custom(
                             "Georgia",
                             size: 18
                         )
                     )
-                    .padding(EdgeInsets(top: 7, leading: 15, bottom: 7, trailing: 15))
-                    .foregroundStyle(Color.white)
-                    .background(Color.black)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-            }
-            Button(action: {}) {
-                Text("<- Home")
                     .foregroundStyle(Color.white)
             }
             Spacer()
