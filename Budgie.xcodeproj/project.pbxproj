@@ -13,6 +13,8 @@
 		2E35C89E2BB1A8DB004F5557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E35C89D2BB1A8DB004F5557 /* Preview Assets.xcassets */; };
 		2E35C8A82BB318E9004F5557 /* QuestionPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35C8A72BB318E9004F5557 /* QuestionPageView.swift */; };
 		2E35C8AA2BB32BBF004F5557 /* QuestionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35C8A92BB32BBF004F5557 /* QuestionPage.swift */; };
+		2EC036812C08B1D0004BA3C5 /* ChartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC036802C08B1D0004BA3C5 /* ChartScreenView.swift */; };
+		2EC036832C0A2943004BA3C5 /* FinalBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC036822C0A2943004BA3C5 /* FinalBudgetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		2E35C89D2BB1A8DB004F5557 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E35C8A72BB318E9004F5557 /* QuestionPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPageView.swift; sourceTree = "<group>"; };
 		2E35C8A92BB32BBF004F5557 /* QuestionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPage.swift; sourceTree = "<group>"; };
+		2EC036802C08B1D0004BA3C5 /* ChartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartScreenView.swift; sourceTree = "<group>"; };
+		2EC036822C0A2943004BA3C5 /* FinalBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalBudgetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				2E35C8A72BB318E9004F5557 /* QuestionPageView.swift */,
 				2E35C8982BB1A8D8004F5557 /* HomeScreenView.swift */,
+				2EC036802C08B1D0004BA3C5 /* ChartScreenView.swift */,
+				2EC036822C0A2943004BA3C5 /* FinalBudgetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,8 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E35C8992BB1A8D8004F5557 /* HomeScreenView.swift in Sources */,
+				2EC036812C08B1D0004BA3C5 /* ChartScreenView.swift in Sources */,
 				2E35C8AA2BB32BBF004F5557 /* QuestionPage.swift in Sources */,
 				2E35C8972BB1A8D8004F5557 /* BudgieApp.swift in Sources */,
+				2EC036832C0A2943004BA3C5 /* FinalBudgetView.swift in Sources */,
 				2E35C8A82BB318E9004F5557 /* QuestionPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
