@@ -23,7 +23,7 @@ struct QuestionPageView: View {
                     .frame(width: 175)
             }
             HStack {
-                Text("Question placeholder")
+                Text("\(page.question)")
                     .font(
                         .custom(
                             "AmericanTypewriter-SemiBold",
@@ -33,7 +33,7 @@ struct QuestionPageView: View {
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                 Spacer()
             }
-            TextField("Input placeholder", text: $userInput)
+            TextField("Enter here...", text: $userInput)
                 .padding(EdgeInsets(top: 5, leading: 10, bottom: 30, trailing: 0))
                 .background(Color.white)
                 .border(Color.black, width: 3)
@@ -48,6 +48,7 @@ struct QuestionPageView: View {
                         )
                         .foregroundStyle(Color.white)
                 }
+                .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 0))
                 Spacer()
                 Button (action: {moveOn()}) {
                     Text("Next question")
@@ -63,15 +64,19 @@ struct QuestionPageView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
             }
-            Button(action: {}) {
-                Text("<- Home")
-                    .font(
-                        .custom(
-                            "Georgia",
-                            size: 18
+            HStack {
+                Button(action: {}) {
+                    Text("<- Home")
+                        .font(
+                            .custom(
+                                "Georgia",
+                                size: 18
+                            )
                         )
-                    )
-                    .foregroundStyle(Color.white)
+                        .foregroundStyle(Color.white)
+                }
+                .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 0))
+                Spacer()
             }
             Spacer()
         }

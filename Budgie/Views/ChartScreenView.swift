@@ -21,17 +21,45 @@ struct ChartScreenView: View {
     ]
     
     var body: some View {
-        VStack {
-            Chart {
-                ForEach(budgetRatios, id: \.name) { costs in
+        ZStack {
+            LinearGradient(colors: [Color("chartGradientTop"), Color("chartGradientBottom")], startPoint: .topTrailing, endPoint: .bottomLeading)
+            VStack {
+                Chart {
+                    ForEach(budgetRatios, id: \.name) { costs in
 
-                    SectorMark(
-                        angle: .value("Cup", costs.cost)
-                    )
-                    .foregroundStyle(by: .value("Type", costs.name))
+                        SectorMark(
+                            angle: .value("Cup", costs.cost)
+                        )
+                        .foregroundStyle(by: .value("Type", costs.name))
+                    }
+                }
+                .frame(height: 500)
+                HStack {
+                    Button (action: {}) {
+                        Text("<- Home")
+                            .font(
+                                .custom(
+                                    "Georgia",
+                                    size: 18
+                                )
+                            )
+                            .foregroundStyle(Color.gray)
+                    }
+                    .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 0))
+                    Spacer()
+                    Button (action: {}) {
+                        Text("Tips ->")
+                            .font(
+                                .custom(
+                                    "Georgia",
+                                    size: 18
+                                )
+                            )
+                            .foregroundStyle(Color.gray)
+                    }
+                    .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 10))
                 }
             }
-            .frame(height: 500)
         }
     }
 }
