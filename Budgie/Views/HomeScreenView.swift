@@ -9,40 +9,47 @@ import SwiftUI
 
 struct HomeScreenView: View {
     var body: some View {
-        ZStack {
-            Image("homeScreenBackground")
-            VStack {
-                HStack {
-                    Image("bird")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 325)
-                    Spacer(minLength: 150)
-                }
-                Text("Sort out your entire vacation budget, all in one place.")
-                    .multilineTextAlignment(.center)
-                    .font(
-                        .custom(
-                            "Avenir-Black",
-                            size: 28
-                        )
-                    )
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Text("Get started")
+        
+        NavigationStack {
+            ZStack {
+                Image("homeScreenBackground")
+                VStack {
+                    HStack {
+                        Image("bird")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 325)
+                        Spacer(minLength: 150)
+                    }
+                    Text("Sort out your entire vacation budget, all in one place.")
+                        .multilineTextAlignment(.center)
                         .font(
                             .custom(
-                                "Georgia",
-                                size: 20)
+                                "Avenir-Black",
+                                size: 28
+                            )
                         )
-                        .frame(height: 10)
-                        .padding()
-                        .foregroundStyle(.white)
-                        .background(Color.black)
-                        .clipShape(RoundedRectangle(cornerRadius: 13))
+                    NavigationLink {
+                        QuestionPageView(page: question1)
+                    } label: {
+                        Text("Get started")
+                            .font(
+                                .custom(
+                                    "Georgia",
+                                    size: 20)
+                            )
+                            .frame(height: 10)
+                            .padding()
+                            .foregroundStyle(.white)
+                            .background(Color.black)
+                            .clipShape(RoundedRectangle(cornerRadius: 13))
+                    }
+
                 }
+                .padding()
             }
-            .padding()
         }
+        
     }
 }
 
