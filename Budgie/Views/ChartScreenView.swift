@@ -23,6 +23,7 @@ struct ChartScreenView: View {
     var body: some View {
         ZStack {
             LinearGradient(colors: [Color("chartGradientTop"), Color("chartGradientBottom")], startPoint: .topTrailing, endPoint: .bottomLeading)
+                .ignoresSafeArea()
             VStack {
                 Chart {
                     ForEach(budgetRatios, id: \.name) { costs in
