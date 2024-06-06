@@ -15,7 +15,7 @@ struct OpeningView: View {
     //MARK: Computed properties
     var body: some View {
         if hasGottenStarted == false {
-            StartScreenView()
+            StartScreenView(getStarted: $hasGottenStarted)
         } else {
             HomeScreenView()
         }

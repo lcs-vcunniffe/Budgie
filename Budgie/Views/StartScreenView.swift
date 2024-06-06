@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct StartScreenView: View {
+    //MARK: Stored properties
+    @Binding var getStarted: Bool
+    
+    //MARK: Computed properties
     var body: some View {
         
         NavigationStack {
@@ -29,9 +33,7 @@ struct StartScreenView: View {
                                 size: 28
                             )
                         )
-                    NavigationLink {
-                        QuestionPageView(page: question1)
-                    } label: {
+                    Button(action: {getStarted = true}) {
                         Text("Get started")
                             .font(
                                 .custom(
@@ -54,5 +56,5 @@ struct StartScreenView: View {
 }
 
 #Preview {
-    StartScreenView()
+    StartScreenView(getStarted: Binding.constant(false))
 }

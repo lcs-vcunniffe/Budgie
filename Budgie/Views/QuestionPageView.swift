@@ -52,7 +52,7 @@ struct QuestionPageView: View {
                     .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 0))
                     Spacer()
                     NavigationLink {
-                        SecondQuestionPageView
+                        SecondQuestionPageView()
                     } label: {
                         Text("Next question")
                             .font(

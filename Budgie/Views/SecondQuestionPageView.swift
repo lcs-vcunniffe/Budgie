@@ -29,7 +29,7 @@ struct SecondQuestionPageView: View {
                                 "AmericanTypewriter-SemiBold",
                                 size: 30
                             )
-                    )
+                        )
                         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                     Spacer()
                 }
@@ -88,5 +88,5 @@ struct SecondQuestionPageView: View {
 }
 
 #Preview {
-    SecondQuestionPageView
+    SecondQuestionPageView()
 }
