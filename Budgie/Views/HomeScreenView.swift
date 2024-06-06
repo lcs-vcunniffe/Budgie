@@ -9,7 +9,19 @@ import SwiftUI
 
 struct HomeScreenView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ZStack {
+                LinearGradient(colors: [Color.homeGradientTop, Color.homeGradientBottom], startPoint: .topTrailing, endPoint: .bottomLeading)
+                    .ignoresSafeArea()
+                VStack {
+                    NavigationLink {
+                        QuestionPageView(page: question1)
+                    } label: {
+                        Text("Budget name placeholder")
+                    }
+                }
+            }
+        }
     }
 }
 

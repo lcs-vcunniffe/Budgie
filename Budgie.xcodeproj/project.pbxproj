@@ -85,13 +85,13 @@
 		2E35C8A42BB1A928004F5557 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2E35C8A72BB318E9004F5557 /* QuestionPageView.swift */,
-				2E35C8982BB1A8D8004F5557 /* StartScreenView.swift */,
-				2EC036802C08B1D0004BA3C5 /* ChartScreenView.swift */,
-				2EC036822C0A2943004BA3C5 /* FinalBudgetView.swift */,
-				2EC036842C0E53EF004BA3C5 /* SecondQuestionPageView.swift */,
 				2EC036862C11EEC0004BA3C5 /* OpeningView.swift */,
+				2E35C8982BB1A8D8004F5557 /* StartScreenView.swift */,
 				2EC036882C11EFF7004BA3C5 /* HomeScreenView.swift */,
+				2E35C8A72BB318E9004F5557 /* QuestionPageView.swift */,
+				2EC036842C0E53EF004BA3C5 /* SecondQuestionPageView.swift */,
+				2EC036822C0A2943004BA3C5 /* FinalBudgetView.swift */,
+				2EC036802C08B1D0004BA3C5 /* ChartScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

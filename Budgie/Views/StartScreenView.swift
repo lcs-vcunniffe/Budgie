@@ -12,7 +12,7 @@ struct StartScreenView: View {
         
         NavigationStack {
             ZStack {
-                Image("homeScreenBackground")
+                Image("startScreenBackground")
                 VStack {
                     HStack {
                         Image("bird")
