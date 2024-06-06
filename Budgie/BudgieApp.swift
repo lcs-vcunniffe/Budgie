@@ -11,7 +11,7 @@ import SwiftUI
 struct BudgieApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeScreenView()
+            OpeningView()
         }
     }
 }
