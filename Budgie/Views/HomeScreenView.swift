@@ -15,7 +15,7 @@ struct HomeScreenView: View {
                     .ignoresSafeArea()
                 VStack {
                     NavigationLink {
-                        QuestionPageView(page: question1)
+                        FinalBudgetView()
                     } label: {
                         Text("Budget name placeholder")
                     }
