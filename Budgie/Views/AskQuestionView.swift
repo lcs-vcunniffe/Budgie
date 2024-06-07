@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct QuestionPageView: View {
+struct AskQuestionView: View {
     //MARK: Stored properties
-    let page: QuestionPage
+    @State var currentQuestion = 0
     @State var userInput = ""
     
     //MARK: Computed properties
@@ -24,7 +24,7 @@ struct QuestionPageView: View {
                         .frame(width: 175)
                 }
                 HStack {
-                    Text("\(page.question)")
+                    Text("\(questions[currentQuestion].question)")
                         .font(
                             .custom(
                                 "AmericanTypewriter-SemiBold",
@@ -39,7 +39,7 @@ struct QuestionPageView: View {
                     .background(Color.white)
                     .border(Color.black, width: 3)
                 HStack {
-                    Button (action: {}) {
+                    Button (action: {currentQuestion -= 1}) {
                         Text("<- Back")
                             .font(
                                 .custom(
@@ -51,9 +51,7 @@ struct QuestionPageView: View {
                     }
                     .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 0))
                     Spacer()
-                    NavigationLink {
-                        SecondQuestionPageView()
-                    } label: {
+                    Button(action: {currentQuestion += 1}) {
                         Text("Next question")
                             .font(
                                 .custom(
@@ -89,15 +87,9 @@ struct QuestionPageView: View {
     }
     
     //MARK: Functions
-    func moveOn() {
-        guard let inputNumber = Int(userInput)
-        else {
-            //Give the user feedback
-            return
-        }
-    }
+    
 }
 
 #Preview {
-    QuestionPageView(page: question1)
+    AskQuestionView()
 }

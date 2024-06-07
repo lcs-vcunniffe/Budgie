@@ -43,7 +43,7 @@ struct HomeScreenView: View {
                         Text("Budget name placeholder")
                     }
                     NavigationLink {
-                        QuestionPageView(page: question1)
+                        AskQuestionView()
                     } label: {
                         Text("+ Add new")
                     }
