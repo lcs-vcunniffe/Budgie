@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+@Observable
+class BudgieViewModel {
+    //MARK: Stored properties
+    
+}

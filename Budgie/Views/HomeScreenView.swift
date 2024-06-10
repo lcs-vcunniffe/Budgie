@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HomeScreenView: View {
+    //MARK: Stored properties
+    @State var viewModel = BudgieViewModel()
+    
+    //MARK: Computed properties
     var body: some View {
         NavigationStack {
             ZStack {
