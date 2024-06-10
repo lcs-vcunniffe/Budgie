@@ -13,6 +13,14 @@
 		2E35C89E2BB1A8DB004F5557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E35C89D2BB1A8DB004F5557 /* Preview Assets.xcassets */; };
 		2E35C8A82BB318E9004F5557 /* AskQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35C8A72BB318E9004F5557 /* AskQuestionView.swift */; };
 		2E35C8AA2BB32BBF004F5557 /* QuestionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35C8A92BB32BBF004F5557 /* QuestionPage.swift */; };
+		2E68F6AF2C174BDF00F2058E /* BudgieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68F6AE2C174BDF00F2058E /* BudgieViewModel.swift */; };
+		2E68F6B22C174C4100F2058E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68F6B12C174C4100F2058E /* Database.swift */; };
+		2E68F6B52C177CB100F2058E /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 2E68F6B42C177CB100F2058E /* Auth */; };
+		2E68F6B72C177CB100F2058E /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 2E68F6B62C177CB100F2058E /* Functions */; };
+		2E68F6B92C177CB100F2058E /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 2E68F6B82C177CB100F2058E /* PostgREST */; };
+		2E68F6BB2C177CB100F2058E /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 2E68F6BA2C177CB100F2058E /* Realtime */; };
+		2E68F6BD2C177CB100F2058E /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 2E68F6BC2C177CB100F2058E /* Storage */; };
+		2E68F6BF2C177CB100F2058E /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2E68F6BE2C177CB100F2058E /* Supabase */; };
 		2EC036812C08B1D0004BA3C5 /* ChartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC036802C08B1D0004BA3C5 /* ChartScreenView.swift */; };
 		2EC036832C0A2943004BA3C5 /* FinalBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC036822C0A2943004BA3C5 /* FinalBudgetView.swift */; };
 		2EC036852C0E53EF004BA3C5 /* SecondQuestionPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC036842C0E53EF004BA3C5 /* SecondQuestionPageView.swift */; };
@@ -28,6 +36,8 @@
 		2E35C89D2BB1A8DB004F5557 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E35C8A72BB318E9004F5557 /* AskQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionView.swift; sourceTree = "<group>"; };
 		2E35C8A92BB32BBF004F5557 /* QuestionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPage.swift; sourceTree = "<group>"; };
+		2E68F6AE2C174BDF00F2058E /* BudgieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgieViewModel.swift; sourceTree = "<group>"; };
+		2E68F6B12C174C4100F2058E /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		2EC036802C08B1D0004BA3C5 /* ChartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartScreenView.swift; sourceTree = "<group>"; };
 		2EC036822C0A2943004BA3C5 /* FinalBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalBudgetView.swift; sourceTree = "<group>"; };
 		2EC036842C0E53EF004BA3C5 /* SecondQuestionPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondQuestionPageView.swift; sourceTree = "<group>"; };
@@ -40,6 +50,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E68F6B92C177CB100F2058E /* PostgREST in Frameworks */,
+				2E68F6B72C177CB100F2058E /* Functions in Frameworks */,
+				2E68F6BF2C177CB100F2058E /* Supabase in Frameworks */,
+				2E68F6B52C177CB100F2058E /* Auth in Frameworks */,
+				2E68F6BD2C177CB100F2058E /* Storage in Frameworks */,
+				2E68F6BB2C177CB100F2058E /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +81,8 @@
 		2E35C8952BB1A8D8004F5557 /* Budgie */ = {
 			isa = PBXGroup;
 			children = (
+				2E68F6AD2C174BAA00F2058E /* ViewModel */,
+				2E68F6B02C174C1C00F2058E /* Helpers */,
 				2E35C8A62BB1A953004F5557 /* Models */,
 				2E35C8A42BB1A928004F5557 /* Views */,
 				2E35C8962BB1A8D8004F5557 /* BudgieApp.swift */,
@@ -104,6 +122,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2E68F6AD2C174BAA00F2058E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2E68F6AE2C174BDF00F2058E /* BudgieViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2E68F6B02C174C1C00F2058E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2E68F6B12C174C4100F2058E /* Database.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +154,14 @@
 			dependencies = (
 			);
 			name = Budgie;
+			packageProductDependencies = (
+				2E68F6B42C177CB100F2058E /* Auth */,
+				2E68F6B62C177CB100F2058E /* Functions */,
+				2E68F6B82C177CB100F2058E /* PostgREST */,
+				2E68F6BA2C177CB100F2058E /* Realtime */,
+				2E68F6BC2C177CB100F2058E /* Storage */,
+				2E68F6BE2C177CB100F2058E /* Supabase */,
+			);
 			productName = Budgie;
 			productReference = 2E35C8932BB1A8D8004F5557 /* Budgie.app */;
 			productType = "com.apple.product-type.application";
@@ -148,6 +190,9 @@
 				Base,
 			);
 			mainGroup = 2E35C88A2BB1A8D8004F5557;
+			packageReferences = (
+				2E68F6B32C177CB100F2058E /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = 2E35C8942BB1A8D8004F5557 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -175,11 +220,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E35C8992BB1A8D8004F5557 /* StartScreenView.swift in Sources */,
+				2E68F6B22C174C4100F2058E /* Database.swift in Sources */,
 				2EC036812C08B1D0004BA3C5 /* ChartScreenView.swift in Sources */,
 				2E35C8AA2BB32BBF004F5557 /* QuestionPage.swift in Sources */,
 				2EC036892C11EFF7004BA3C5 /* HomeScreenView.swift in Sources */,
 				2E35C8972BB1A8D8004F5557 /* BudgieApp.swift in Sources */,
 				2EC036852C0E53EF004BA3C5 /* SecondQuestionPageView.swift in Sources */,
+				2E68F6AF2C174BDF00F2058E /* BudgieViewModel.swift in Sources */,
 				2EC036832C0A2943004BA3C5 /* FinalBudgetView.swift in Sources */,
 				2E35C8A82BB318E9004F5557 /* AskQuestionView.swift in Sources */,
 				2EC036872C11EEC0004BA3C5 /* OpeningView.swift in Sources */,
@@ -388,6 +435,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E68F6B32C177CB100F2058E /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E68F6B42C177CB100F2058E /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E68F6B32C177CB100F2058E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		2E68F6B62C177CB100F2058E /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E68F6B32C177CB100F2058E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		2E68F6B82C177CB100F2058E /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E68F6B32C177CB100F2058E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		2E68F6BA2C177CB100F2058E /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E68F6B32C177CB100F2058E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		2E68F6BC2C177CB100F2058E /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E68F6B32C177CB100F2058E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		2E68F6BE2C177CB100F2058E /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E68F6B32C177CB100F2058E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E35C88B2BB1A8D8004F5557 /* Project object */;
 }
