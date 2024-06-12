@@ -5,7 +5,7 @@
 //  Created by Veda Niav Cunniffe on 2024-03-26.
 //
 
-import SwiftUI
+import Foundation
 
 struct QuestionPage {
     let question: String
