@@ -29,7 +29,7 @@ struct ChartScreenView: View {
                     ForEach(budgetRatios, id: \.name) { costs in
 
                         SectorMark(
-                            angle: .value("Cup", costs.cost)
+                            angle: .value("Cost", costs.cost)
                         )
                         .foregroundStyle(by: .value("Type", costs.name))
                     }
