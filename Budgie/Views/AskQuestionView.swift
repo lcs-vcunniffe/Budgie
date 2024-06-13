@@ -15,74 +15,81 @@ struct AskQuestionView: View {
     //MARK: Computed properties
     var body: some View {
         NavigationStack {
-            VStack {
-                HStack {
-                    Spacer()
-                    Image("questionCornerTriangle")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 175)
-                }
-                HStack {
-                    Text("\(questions[currentQuestion].question)")
-                        .font(
-                            .custom(
-                                "AmericanTypewriter-SemiBold",
-                                size: 30
-                            )
-                    )
-                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
-                    Spacer()
-                }
-                TextField("Enter here...", text: $userInput)
-                    .padding(EdgeInsets(top: 5, leading: 10, bottom: 30, trailing: 0))
-                    .background(Color.white)
-                    .border(Color.black, width: 3)
-                HStack {
-                    Button (action: {currentQuestion -= 1}) {
-                        Text("<- Back")
+            if currentQuestion < questions.count {
+                
+                VStack {
+                    HStack {
+                        Spacer()
+                        Image("questionCornerTriangle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 175)
+                    }
+                    HStack {
+                        Text("\(questions[currentQuestion].question)")
                             .font(
                                 .custom(
-                                    "Georgia",
-                                    size: 18
+                                    "AmericanTypewriter-SemiBold",
+                                    size: 30
                                 )
                             )
-                            .foregroundStyle(Color.white)
+                            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                        Spacer()
                     }
-                    .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 0))
+                    TextField("Enter here...", text: $userInput)
+                        .padding(EdgeInsets(top: 5, leading: 10, bottom: 30, trailing: 0))
+                        .background(Color.white)
+                        .border(Color.black, width: 3)
+                    HStack {
+                        Button (action: {currentQuestion -= 1}) {
+                            Text("<- Back")
+                                .font(
+                                    .custom(
+                                        "Georgia",
+                                        size: 18
+                                    )
+                                )
+                                .foregroundStyle(Color.white)
+                        }
+                        .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 0))
+                        Spacer()
+                        Button(action: {currentQuestion += 1}) {
+                            Text("Next question")
+                                .font(
+                                    .custom(
+                                        "Georgia",
+                                        size: 18
+                                    )
+                                )
+                                .padding(EdgeInsets(top: 7, leading: 15, bottom: 7, trailing: 15))
+                                .foregroundStyle(Color.white)
+                                .background(Color.black)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
+                    }
+                    HStack {
+                        Button(action: {}) {
+                            Text("<- Home")
+                                .font(
+                                    .custom(
+                                        "Georgia",
+                                        size: 18
+                                    )
+                                )
+                                .foregroundStyle(Color.white)
+                        }
+                        .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 0))
+                        Spacer()
+                    }
                     Spacer()
-                    Button(action: {currentQuestion += 1}) {
-                        Text("Next question")
-                            .font(
-                                .custom(
-                                    "Georgia",
-                                    size: 18
-                                )
-                            )
-                            .padding(EdgeInsets(top: 7, leading: 15, bottom: 7, trailing: 15))
-                            .foregroundStyle(Color.white)
-                            .background(Color.black)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                    }
                 }
-                HStack {
-                    Button(action: {}) {
-                        Text("<- Home")
-                            .font(
-                                .custom(
-                                    "Georgia",
-                                    size: 18
-                                )
-                            )
-                            .foregroundStyle(Color.white)
-                    }
-                    .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 0))
-                    Spacer()
-                }
-                Spacer()
+                .ignoresSafeArea()
+                .background(Color("questionBackground"))
+            } else if currentQuestion <= 0 {
+                HomeScreenView()
+            } else {
+                FinalBudgetView()
             }
-            .ignoresSafeArea()
-        .background(Color("questionBackground"))
         }
     }
     
