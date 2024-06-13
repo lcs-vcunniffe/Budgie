@@ -66,6 +66,7 @@ struct AskQuestionView: View {
                                 .background(Color.black)
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
+                        .disabled(userInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == true)
                     }
                     HStack {
                         Button(action: {currentQuestion = -1}) {
