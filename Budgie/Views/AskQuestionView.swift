@@ -15,7 +15,7 @@ struct AskQuestionView: View {
     //MARK: Computed properties
     var body: some View {
         NavigationStack {
-            if currentQuestion < questions.count {
+            if currentQuestion < questions.count, currentQuestion >= 0 {
                 
                 VStack {
                     HStack {
@@ -68,7 +68,7 @@ struct AskQuestionView: View {
                         }
                     }
                     HStack {
-                        Button(action: {}) {
+                        Button(action: {currentQuestion = -1}) {
                             Text("<- Home")
                                 .font(
                                     .custom(
@@ -85,7 +85,7 @@ struct AskQuestionView: View {
                 }
                 .ignoresSafeArea()
                 .background(Color("questionBackground"))
-            } else if currentQuestion <= 0 {
+            } else if currentQuestion < 0 {
                 HomeScreenView()
             } else {
                 FinalBudgetView()
