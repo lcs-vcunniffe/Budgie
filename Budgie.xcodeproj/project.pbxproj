@@ -21,7 +21,7 @@
 		2E68F6BB2C177CB100F2058E /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 2E68F6BA2C177CB100F2058E /* Realtime */; };
 		2E68F6BD2C177CB100F2058E /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 2E68F6BC2C177CB100F2058E /* Storage */; };
 		2E68F6BF2C177CB100F2058E /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2E68F6BE2C177CB100F2058E /* Supabase */; };
-		2E68F6C12C19EC3E00F2058E /* FinalBudgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68F6C02C19EC3E00F2058E /* FinalBudgets.swift */; };
+		2E68F6C12C19EC3E00F2058E /* FinalBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68F6C02C19EC3E00F2058E /* FinalBudget.swift */; };
 		2EC036812C08B1D0004BA3C5 /* ChartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC036802C08B1D0004BA3C5 /* ChartScreenView.swift */; };
 		2EC036832C0A2943004BA3C5 /* FinalBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC036822C0A2943004BA3C5 /* FinalBudgetView.swift */; };
 		2EC036852C0E53EF004BA3C5 /* SecondQuestionPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC036842C0E53EF004BA3C5 /* SecondQuestionPageView.swift */; };
@@ -39,7 +39,7 @@
 		2E35C8A92BB32BBF004F5557 /* QuestionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPage.swift; sourceTree = "<group>"; };
 		2E68F6AE2C174BDF00F2058E /* BudgieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgieViewModel.swift; sourceTree = "<group>"; };
 		2E68F6B12C174C4100F2058E /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		2E68F6C02C19EC3E00F2058E /* FinalBudgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalBudgets.swift; sourceTree = "<group>"; };
+		2E68F6C02C19EC3E00F2058E /* FinalBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalBudget.swift; sourceTree = "<group>"; };
 		2EC036802C08B1D0004BA3C5 /* ChartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartScreenView.swift; sourceTree = "<group>"; };
 		2EC036822C0A2943004BA3C5 /* FinalBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalBudgetView.swift; sourceTree = "<group>"; };
 		2EC036842C0E53EF004BA3C5 /* SecondQuestionPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondQuestionPageView.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				2E35C8A92BB32BBF004F5557 /* QuestionPage.swift */,
-				2E68F6C02C19EC3E00F2058E /* FinalBudgets.swift */,
+				2E68F6C02C19EC3E00F2058E /* FinalBudget.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 				2EC036812C08B1D0004BA3C5 /* ChartScreenView.swift in Sources */,
 				2E35C8AA2BB32BBF004F5557 /* QuestionPage.swift in Sources */,
 				2EC036892C11EFF7004BA3C5 /* HomeScreenView.swift in Sources */,
-				2E68F6C12C19EC3E00F2058E /* FinalBudgets.swift in Sources */,
+				2E68F6C12C19EC3E00F2058E /* FinalBudget.swift in Sources */,
 				2E35C8972BB1A8D8004F5557 /* BudgieApp.swift in Sources */,
 				2EC036852C0E53EF004BA3C5 /* SecondQuestionPageView.swift in Sources */,
 				2E68F6AF2C174BDF00F2058E /* BudgieViewModel.swift in Sources */,
