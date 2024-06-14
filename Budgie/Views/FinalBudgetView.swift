@@ -10,6 +10,7 @@ import SwiftUI
 struct FinalBudgetView: View {
     //MARK: Stored properties
     let finalBudget: FinalBudget
+    @Binding var moveToChart: Bool
     
     //MARK: Computed properties
     var body: some View {
@@ -57,7 +58,7 @@ struct FinalBudgetView: View {
                 Rectangle()
                     .fill(Color.clear)
                     .frame(height: 50)
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {moveToChart = true}) {
                     Text("Continue")
                         .font(
                             .custom(
@@ -76,5 +77,5 @@ struct FinalBudgetView: View {
 }
 
 #Preview {
-    FinalBudgetView(finalBudget: budgetA)
+    FinalBudgetView(finalBudget: budgetA, moveToChart: Binding.constant(false))
 }
