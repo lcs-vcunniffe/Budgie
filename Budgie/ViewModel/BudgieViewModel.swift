@@ -18,9 +18,9 @@ class BudgieViewModel {
     //MARK: Initializer(s)
     init(budget: [FinalBudget] = []) {
         self.budget = budget
-        Task {
-            try await getBudgets()
-        }
+//        Task {
+//            try await getBudgets()
+//        }
     }
     
     //MARK: Functions

@@ -63,7 +63,7 @@ struct AskQuestionView: View {
                                 )
                                 .padding(EdgeInsets(top: 7, leading: 15, bottom: 7, trailing: 15))
                                 .foregroundStyle(Color.white)
-                                .background(Color.black)
+                                .background(userInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? Color.gray : Color.black)
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
                         .disabled(userInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == true)
