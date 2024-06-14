@@ -19,12 +19,12 @@ class BudgieViewModel {
     init(budget: [FinalBudget] = []) {
         self.budget = budget
         Task {
-            try await getTodos()
+            try await getBudgets()
         }
     }
     
     //MARK: Functions
-    func getTodos() async throws {
+    func getBudgets() async throws {
             
         // Say that the app is getting the budgets
         fetchingBudgets = true
