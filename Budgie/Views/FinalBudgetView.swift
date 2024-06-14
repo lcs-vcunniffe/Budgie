@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct FinalBudgetView: View {
+    //MARK: Stored properties
+    let finalBudget: FinalBudget
+    
+    //MARK: Computed properties
     var body: some View {
         ZStack {
             Image("finalBudgetBackground")
@@ -23,7 +27,7 @@ struct FinalBudgetView: View {
                 Rectangle()
                     .fill(Color.clear)
                     .frame(height: 50)
-                Text("$X")
+                Text("$\(finalBudget.totalCost)")
                     .font(
                         .custom(
                             "AcademyEngravedLetPlain",
@@ -34,7 +38,7 @@ struct FinalBudgetView: View {
                 Rectangle()
                     .fill(Color.clear)
                     .frame(height: 10)
-                Text("$Y per person")
+                Text("$\(finalBudget.costPerPerson) per person")
                     .font(
                         .custom(
                             "Avenir-Medium",
@@ -42,7 +46,7 @@ struct FinalBudgetView: View {
                         )
                     )
                     .foregroundStyle(Color.white)
-                Text("$Z per day")
+                Text("$\(finalBudget.costPerDay) per day")
                     .font(
                         .custom(
                             "Avenir-Medium",
@@ -72,5 +76,5 @@ struct FinalBudgetView: View {
 }
 
 #Preview {
-    FinalBudgetView()
+    FinalBudgetView(finalBudget: budgetA)
 }

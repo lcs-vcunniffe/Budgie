@@ -89,7 +89,7 @@ struct AskQuestionView: View {
             } else if currentQuestion < 0 {
                 HomeScreenView()
             } else {
-                FinalBudgetView()
+                FinalBudgetView(finalBudget: budgetA)
             }
         }
     }

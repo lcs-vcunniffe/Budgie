@@ -41,9 +41,9 @@ struct HomeScreenView: View {
                             .padding(EdgeInsets(top: 0, leading: 20, bottom: 60, trailing: 0))
                         Spacer()
                     }
-                    List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+                    List(viewModel.budget) { budgets in
                         NavigationLink {
-                            FinalBudgetView()
+                            FinalBudgetView(finalBudget: budgetA)
                         } label: {
                             Text("Budget name placeholder")
                         }
